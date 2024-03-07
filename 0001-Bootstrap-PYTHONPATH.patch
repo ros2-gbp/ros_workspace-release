@@ -1,0 +1,26 @@
+From 1e852cbf088facfde38df1ebd6fc5a46a24c2218 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Steven!=20Ragnar=C3=B6k?= <steven@nuclearsandwich.com>
+Date: Wed, 14 Nov 2018 19:54:59 -0800
+Subject: [PATCH] Bootstrap PYTHONPATH
+
+---
+ debian/rules.em | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/debian/rules.em b/debian/rules.em
+index 284a07142d7a..e5ef76418196 100755
+--- a/debian/rules.em
++++ b/debian/rules.em
+@@ -26,6 +26,9 @@ export DEB_HOST_MULTIARCH := $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
+ 
+ DEB_HOST_GNU_TYPE ?= $(shell dpkg-architecture -qDEB_HOST_GNU_TYPE)
+ 
++# Needed to bootstrap since the ros_workspace package does not yet exist.
++export PYTHONPATH=@(InstallationPrefix)/lib/python3.12/site-packages
++
+ %:
+ 	dh $@@ -v --buildsystem=cmake --builddirectory=.obj-$(DEB_HOST_GNU_TYPE)
+ 
+-- 
+2.44.0
+
