@@ -1,4 +1,4 @@
-From da8c1e8cf1a27ca17b3f57f6ce9bd32c2f9bbe1e Mon Sep 17 00:00:00 2001
+From 533ef77de85ad4318b9bc9f93f348fa91ddfd30b Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Steven!=20Ragnar=C3=B6k?= <steven@nuclearsandwich.com>
 Date: Wed, 14 Nov 2018 19:54:59 -0800
 Subject: [PATCH] Bootstrap PYTHONPATH
