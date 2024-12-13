@@ -1,3 +1,26 @@
+## ros_workspace (jazzy) - 1.0.3-7
+
+The packages in the `ros_workspace` repository were released into the `jazzy` distro by running `/home/cottsay/infra_ws/install/bloom/bin/bloom-release -r jazzy ros_workspace` on `Fri, 13 Dec 2024 16:20:38 -0000`
+
+The `ros_workspace` package was released.
+
+Version of package(s) in repository `ros_workspace`:
+
+- upstream repository: https://github.com/ros2/ros_workspace.git
+- release repository: https://github.com/ros2-gbp/ros_workspace-release.git
+- rosdistro version: `1.0.3-6`
+- old version: `1.0.3-6`
+- new version: `1.0.3-7`
+
+Versions of tools used:
+
+- bloom version: `0.12.0`
+- catkin_pkg version: `1.0.0`
+- rosdep version: `0.25.1`
+- rosdistro version: `1.0.0`
+- vcstools version: `0.1.42`
+
+
 ## ros_workspace (rolling) - 1.0.3-5
 
 The packages in the `ros_workspace` repository were released into the `rolling` distro by running `/home/cottsay/infra_ws/install/bloom/bin/bloom-release -r rolling ros_workspace` on `Thu, 07 Mar 2024 19:57:27 -0000`
