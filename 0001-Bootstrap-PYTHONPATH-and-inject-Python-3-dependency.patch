@@ -1,4 +1,4 @@
-From f2cf21a7462b99fe50365077dc2ec9d00bdb32ec Mon Sep 17 00:00:00 2001
+From 6d141f9579761e2108eec1f4707ce5d395f887bc Mon Sep 17 00:00:00 2001
 From: Scott K Logan <logans@cottsay.net>
 Date: Tue, 19 Jan 2021 18:25:01 -0800
 Subject: [PATCH] Bootstrap PYTHONPATH and inject Python 3 dependency
@@ -59,5 +59,5 @@ index b1217d052964..aa1b83488699 100644
  TEST_TARGET=$(%__make -qp -C .obj-%{_target_platform} | sed "s/^\(test\|check\):.*/\\1/;t f;d;:f;q0")
  if [ -n "$TEST_TARGET" ]; then
 -- 
-2.44.0
+2.47.0
 
