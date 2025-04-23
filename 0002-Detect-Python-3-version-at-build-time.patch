@@ -1,4 +1,4 @@
-From 88479cfd808e520f3a9f7cb376a8eb70f694f391 Mon Sep 17 00:00:00 2001
+From 6e817473658510d6c734f9c75a2718e27863a138 Mon Sep 17 00:00:00 2001
 From: Scott K Logan <logans@cottsay.net>
 Date: Thu, 12 Dec 2024 14:29:24 -0600
 Subject: [PATCH 2/2] Detect Python 3 version at build time
@@ -23,5 +23,5 @@ index e5ef76418196..9941d9818371 100755
  %:
  	dh $@@ -v --buildsystem=cmake --builddirectory=.obj-$(DEB_HOST_GNU_TYPE)
 -- 
-2.47.0
+2.49.0
 
