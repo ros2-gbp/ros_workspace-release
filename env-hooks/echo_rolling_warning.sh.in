@@ -1,0 +1,1 @@
+echo "Warning: ROS Rolling has migrated to Ubuntu 26.04. Ubuntu 24.04 will no longer receive updated ROS Rolling packages."
