@@ -58,9 +58,6 @@ else()
       "prepend-non-duplicate;${LIBRARY_PATH_ENV_VAR};${CMAKE_INSTALL_LIBDIR}")
     set(MULTIARCH_LIBRARY_PATH_HOOK "env-hooks/multiarch_library_paths.sh.in")
   endif()
-  set(
-    AMENT_CMAKE_ENVIRONMENT_HOOKS_DESC_echo_rolling_warning
-    "source;${CMAKE_INSTALL_PREFIX}/share/ros_workspace/environment/echo_rolling_warning.sh")
   ament_environment_hooks("${LIBRARY_PATH_HOOK}" "${PYTHONPATH_HOOK}" ${MULTIARCH_LIBRARY_PATH_HOOK} "env-hooks/echo_rolling_warning.sh.in")
 endif()
 
