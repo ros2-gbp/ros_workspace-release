@@ -1,1 +1,0 @@
-if [ -z "$ROS_NO_WARN_ROLLING_EOL" ]; then echo "Warning: ROS Rolling has migrated to Enterprise Linux 10. Enterprise Linux 9 will no longer receive updated ROS Rolling system packages." >&2; fi
