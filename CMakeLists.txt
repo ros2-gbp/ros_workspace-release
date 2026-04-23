@@ -58,7 +58,7 @@ else()
       "prepend-non-duplicate;${LIBRARY_PATH_ENV_VAR};${CMAKE_INSTALL_LIBDIR}")
     set(MULTIARCH_LIBRARY_PATH_HOOK "env-hooks/multiarch_library_paths.sh.in")
   endif()
-  ament_environment_hooks("${LIBRARY_PATH_HOOK}" "${PYTHONPATH_HOOK}" ${MULTIARCH_LIBRARY_PATH_HOOK})
+  ament_environment_hooks("${LIBRARY_PATH_HOOK}" "${PYTHONPATH_HOOK}" ${MULTIARCH_LIBRARY_PATH_HOOK} "env-hooks/echo_rolling_warning.sh.in")
 endif()
 
 # skip using ament_index/resource_index/parent_prefix_path
