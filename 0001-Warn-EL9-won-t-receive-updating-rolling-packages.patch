@@ -1,0 +1,36 @@
+From 37ef7decc6bf16f2f37aad68fee0186c62ca8647 Mon Sep 17 00:00:00 2001
+From: Shane Loretz <shane.loretz@gmail.com>
+Date: Thu, 23 Apr 2026 09:07:35 -0700
+Subject: [PATCH] Warn EL9 won't receive updating rolling packages
+
+Signed-off-by: Shane Loretz <sloretz@intrinsic.ai>
+Co-authored-by: Scott K Logan <logans@cottsay.net>
+---
+ CMakeLists.txt                       | 2 +-
+ env-hooks/echo_rolling_warning.sh.in | 1 +
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+ create mode 100644 env-hooks/echo_rolling_warning.sh.in
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index f2ed31b9fba4..705e6f892667 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -58,7 +58,7 @@ else()
+       "prepend-non-duplicate;${LIBRARY_PATH_ENV_VAR};${CMAKE_INSTALL_LIBDIR}")
+     set(MULTIARCH_LIBRARY_PATH_HOOK "env-hooks/multiarch_library_paths.sh.in")
+   endif()
+-  ament_environment_hooks("${LIBRARY_PATH_HOOK}" "${PYTHONPATH_HOOK}" ${MULTIARCH_LIBRARY_PATH_HOOK})
++  ament_environment_hooks("${LIBRARY_PATH_HOOK}" "${PYTHONPATH_HOOK}" ${MULTIARCH_LIBRARY_PATH_HOOK} "env-hooks/echo_rolling_warning.sh.in")
+ endif()
+ 
+ # skip using ament_index/resource_index/parent_prefix_path
+diff --git a/env-hooks/echo_rolling_warning.sh.in b/env-hooks/echo_rolling_warning.sh.in
+new file mode 100644
+index 000000000000..a731f8294878
+--- /dev/null
++++ b/env-hooks/echo_rolling_warning.sh.in
+@@ -0,0 +1 @@
++if [ -z "$ROS_NO_WARN_ROLLING_EOL" ]; then echo "Warning: ROS Rolling has migrated to Enterprise Linux 10. Enterprise Linux 9 will no longer receive updated ROS Rolling system packages." >&2; fi
+-- 
+2.53.0
+
