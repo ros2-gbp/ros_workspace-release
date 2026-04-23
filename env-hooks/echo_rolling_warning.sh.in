@@ -1,0 +1,1 @@
+if [ -z "$ROS_NO_WARN_ROLLING_EOL" ]; then echo "Warning: ROS Rolling has migrated to Debian Trixie. Debian Bookworm will no longer receive updated ROS Rolling system packages." >&2; fi
